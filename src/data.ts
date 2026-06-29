@@ -52,13 +52,13 @@ export const roles = [
 export const about = {
   paragraphs: [
     "I'm a back-end developer based in Bangkok with more than five years of hands-on experience building the engines behind web applications. My focus is designing clean, well-structured RESTful APIs and data models that scale.",
-    "Across roles at GLONIX Technologies and Y.I.M. Corporation I've shipped APIs for dashboards, e-learning, healthcare, warehouse, and sales systems — mostly with NestJS and TypeScript, backed by PostgreSQL, MySQL, SQL Server, and Redis.",
+    "Currently a back-end developer at Accelerate Technology Group — and previously at GLONIX Technologies and Y.I.M. Corporation — I've shipped APIs for funding platforms, dashboards, e-learning and evaluation systems, healthcare, warehouse, and sales — mostly with NestJS and TypeScript, backed by PostgreSQL, MySQL, SQL Server, and Redis.",
     "Right now I'm deepening my knowledge of Domain-Driven Design and API Security, sharpening both the architecture and the safety of the systems I build.",
   ],
   stats: [
     { value: 5, suffix: "+", label: "Years of experience" },
     { value: 25, suffix: "+", label: "Technologies used" },
-    { value: 9, suffix: "+", label: "Projects delivered" },
+    { value: 12, suffix: "+", label: "Projects delivered" },
   ],
   learning: ["Domain-Driven Design (DDD)", "API Security"],
 };
@@ -78,9 +78,40 @@ export type Job = {
 
 export const experience: Job[] = [
   {
+    company: "Accelerate Technology Group Co., Ltd.",
+    role: "Software Developer",
+    period: "Jun 2025 - Present",
+    items: [
+      {
+        date: "Jun 2025",
+        project: "NSDF Requester",
+        description:
+          "Engineered the backend engine for a funding-subsidy platform — application submissions, automated status tracking, and request revisions — with secure, high-performance APIs driving MOU reviews and final contract sign-offs.",
+      },
+      {
+        date: "Jun 2025",
+        project: "NSDF Risk Management",
+        description:
+          "Built the backend for an institutional Risk Register: flexible data workflows for risk creation, multi-level severity classification, and end-to-end tracking of mitigation and corrective actions through to resolution.",
+      },
+      {
+        date: "May 2024",
+        project: "E-Portfolio — Advisor",
+        description:
+          "Built a secure backend for academic advisors to track, evaluate, and grade submissions — flexible scoring workflows, precise data validation, and high-performance APIs for real-time reporting and dashboard analytics.",
+      },
+      {
+        date: "May 2024",
+        project: "E-Portfolio — Student",
+        description:
+          "Designed a robust RESTful backend for a student evaluation platform — optimized for high-concurrency writes with strong data security, validation, and student anonymity across all assessment workflows.",
+      },
+    ],
+  },
+  {
     company: "GLONIX Technologies Co., Ltd",
     role: "Software Developer",
-    period: "May 2024 - Present",
+    period: "May 2024 - Jun 2025",
     items: [
       {
         date: "Oct 2024",
@@ -90,9 +121,9 @@ export const experience: Job[] = [
       },
       {
         date: "May 2024",
-        project: "E-Portfolio",
+        project: "E-Portfolio — Admin",
         description:
-          "Built RESTful APIs for a learning & assessment platform, delivering real-time learning content and test execution.",
+          "Engineered the backend administration for a campus evaluation system: a dynamic form builder for flexible assessment layouts, plus user management for authentication, profile provisioning, and access control for students and advisors.",
       },
     ],
   },
