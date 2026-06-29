@@ -94,18 +94,6 @@ export const experience: Job[] = [
         description:
           "Built the backend for an institutional Risk Register: flexible data workflows for risk creation, multi-level severity classification, and end-to-end tracking of mitigation and corrective actions through to resolution.",
       },
-      {
-        date: "May 2024",
-        project: "E-Portfolio — Advisor",
-        description:
-          "Built a secure backend for academic advisors to track, evaluate, and grade submissions — flexible scoring workflows, precise data validation, and high-performance APIs for real-time reporting and dashboard analytics.",
-      },
-      {
-        date: "May 2024",
-        project: "E-Portfolio — Student",
-        description:
-          "Designed a robust RESTful backend for a student evaluation platform — optimized for high-concurrency writes with strong data security, validation, and student anonymity across all assessment workflows.",
-      },
     ],
   },
   {
@@ -124,6 +112,18 @@ export const experience: Job[] = [
         project: "E-Portfolio — Admin",
         description:
           "Engineered the backend administration for a campus evaluation system: a dynamic form builder for flexible assessment layouts, plus user management for authentication, profile provisioning, and access control for students and advisors.",
+      },
+      {
+        date: "May 2024",
+        project: "E-Portfolio — Advisor",
+        description:
+          "Built a secure backend for academic advisors to track, evaluate, and grade submissions — flexible scoring workflows, precise data validation, and high-performance APIs for real-time reporting and dashboard analytics.",
+      },
+      {
+        date: "May 2024",
+        project: "E-Portfolio — Student",
+        description:
+          "Designed a robust RESTful backend for a student evaluation platform — optimized for high-concurrency writes with strong data security, validation, and student anonymity across all assessment workflows.",
       },
     ],
   },
