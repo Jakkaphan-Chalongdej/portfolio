@@ -1,4 +1,4 @@
-import { FiMail } from "react-icons/fi";
+import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
 import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 import { profile } from "../data";
 import Reveal from "./Reveal";
@@ -9,7 +9,7 @@ export default function Contact() {
       <div className="container-page">
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
-            <p className="mb-3 font-mono text-sm text-brand-400">04. What's next?</p>
+            <p className="mb-3 font-mono text-sm text-brand-400">05. What's next?</p>
             <h2 className="section-heading">Let's work together</h2>
             <p className="mt-5 text-base leading-relaxed text-zinc-400">
               I'm always open to discussing back-end work, API projects, or
@@ -23,6 +23,24 @@ export default function Contact() {
             >
               <FiMail /> Say hello
             </a>
+
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-zinc-400">
+              <a
+                href={`mailto:${profile.email}`}
+                className="inline-flex items-center gap-2 transition-colors hover:text-brand-400"
+              >
+                <FiMail className="text-brand-400" /> {profile.email}
+              </a>
+              <a
+                href={`tel:${profile.phone.replace(/\s/g, "")}`}
+                className="inline-flex items-center gap-2 transition-colors hover:text-brand-400"
+              >
+                <FiPhone className="text-brand-400" /> {profile.phone}
+              </a>
+              <span className="inline-flex items-center gap-2">
+                <FiMapPin className="text-brand-400" /> {profile.location}
+              </span>
+            </div>
 
             <div className="mt-8 flex items-center justify-center gap-6 text-2xl text-zinc-500">
               <a

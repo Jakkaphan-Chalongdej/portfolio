@@ -28,10 +28,11 @@ import { FiImage } from "react-icons/fi";
 export const profile = {
   name: "Jakkaphan Chalongdej",
   role: "Back-end Developer",
-  location: "Bangkok, Thailand",
+  location: "Lat Phrao, Bangkok",
+  phone: "062 196 1651",
   tagline:
     "Back-end development expert with 5+ years of experience. I quickly design and ship reliable APIs for web applications using NestJS, PostgreSQL, MySQL, and SQL Server.",
-  email: "jakkahan.c@outlook.com",
+  email: "jakkaphan.contact@gmail.com",
   resumeUrl: "",
   socials: {
     github: "https://github.com/Jakkaphan-Chalongdej",
@@ -50,17 +51,119 @@ export const roles = [
 
 export const about = {
   paragraphs: [
-    "I'm a back-end developer based in Bangkok with more than five years of hands-on experience building the engines behind web applications. My focus is designing clean, well-structured APIs and data models that scale.",
-    "Day to day I work mostly with NestJS and TypeScript on the server, backed by PostgreSQL, MySQL, and SQL Server. I'm comfortable across the stack — from React and Next.js on the front end to Docker and Linux in deployment.",
+    "I'm a back-end developer based in Bangkok with more than five years of hands-on experience building the engines behind web applications. My focus is designing clean, well-structured RESTful APIs and data models that scale.",
+    "Across roles at GLONIX Technologies and Y.I.M. Corporation I've shipped APIs for dashboards, e-learning, healthcare, warehouse, and sales systems — mostly with NestJS and TypeScript, backed by PostgreSQL, MySQL, SQL Server, and Redis.",
     "Right now I'm deepening my knowledge of Domain-Driven Design and API Security, sharpening both the architecture and the safety of the systems I build.",
   ],
   stats: [
     { value: 5, suffix: "+", label: "Years of experience" },
-    { value: 20, suffix: "+", label: "Technologies used" },
-    { value: 12, suffix: "+", label: "Projects shipped" },
+    { value: 25, suffix: "+", label: "Technologies used" },
+    { value: 9, suffix: "+", label: "Projects delivered" },
   ],
   learning: ["Domain-Driven Design (DDD)", "API Security"],
 };
+
+export const education = {
+  school: "Rajamangala University of Technology Isan",
+  period: "2017 - 2021",
+  degree: "Bachelor of Science in Computer Science",
+};
+
+export type Job = {
+  company: string;
+  role: string;
+  period: string;
+  items: { date: string; project: string; description: string }[];
+};
+
+export const experience: Job[] = [
+  {
+    company: "GLONIX Technologies Co., Ltd",
+    role: "Software Developer",
+    period: "May 2024 - Present",
+    items: [
+      {
+        date: "Oct 2024",
+        project: "East Water — Dashboard",
+        description:
+          "Designed and developed RESTful APIs serving real-time statistics and analytics for an operational dashboard.",
+      },
+      {
+        date: "May 2024",
+        project: "E-Portfolio",
+        description:
+          "Built RESTful APIs for a learning & assessment platform, delivering real-time learning content and test execution.",
+      },
+    ],
+  },
+  {
+    company: "Y.I.M. Corporation Co., Ltd",
+    role: "Software Developer",
+    period: "May 2021 - Apr 2024",
+    items: [
+      {
+        date: "Oct 2023",
+        project: "Sri Trang — Vendor",
+        description:
+          "RESTful API for a farmers' rubber sales system: production-volume tracking, sales records, and market pricing.",
+      },
+      {
+        date: "Sep 2023",
+        project: "AI-CEDA",
+        description:
+          "RESTful API for cancer data — patient records and disease staging to support medical analysis and treatment tracking.",
+      },
+      {
+        date: "May 2023",
+        project: "Sri Trang — Friend",
+        description:
+          "RESTful API for a rubber sales system: real-time volume & price calculation and trade-data tracking.",
+      },
+      {
+        date: "Sep 2022",
+        project: "Absolute Health — Warehouse",
+        description:
+          "RESTful API for warehouse management: receiving, storing, disbursing, and stock tracking.",
+      },
+      {
+        date: "Feb 2022",
+        project: "Absolute Health",
+        description:
+          "RESTful API for a beauty-clinic management system: appointments, treatment history, and follow-ups.",
+      },
+      {
+        date: "Sep 2021",
+        project: "ABUS",
+        description:
+          "RESTful API for cancer data — managing patient data and disease stages for research and treatment teams.",
+      },
+      {
+        date: "May 2021",
+        project: "Alumet",
+        description:
+          "RESTful API for an aluminum sales system: product sales data and aluminum-usage calculation per product.",
+      },
+    ],
+  },
+];
+
+export type SkillCategory = { title: string; items: string[] };
+
+// Full, CV-accurate skill list rendered as text chips.
+export const skillCategories: SkillCategory[] = [
+  { title: "Languages", items: ["TypeScript", "JavaScript", "Go", "Python", "SQL"] },
+  {
+    title: "Frameworks & Libraries",
+    items: ["NestJS", "Express", "Next.js", "React", "Tailwind CSS", "Ant Design", "Socket.io", "Swagger"],
+  },
+  { title: "Databases", items: ["PostgreSQL", "MySQL", "SQL Server", "Redis"] },
+  { title: "Authentication", items: ["JWT", "Passport.js"] },
+  { title: "Testing", items: ["Jest", "Cypress", "k6"] },
+  { title: "Monitoring & Logging", items: ["Sentry", "Grafana"] },
+  { title: "DevOps & CI/CD", items: ["Docker", "Git", "GitLab"] },
+  { title: "Tools", items: ["VS Code", "Visual Studio", "TablePlus", "SSMS", "AnyDesk"] },
+  { title: "Communication", items: ["Slack", "Trello", "Teams", "Lark", "Monday"] },
+];
 
 export type Skill = { name: string; icon: IconType; color: string };
 export type SkillGroup = { title: string; items: Skill[] };

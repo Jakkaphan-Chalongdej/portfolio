@@ -9,7 +9,7 @@ export default function Projects() {
         <Reveal>
           <div className="flex items-center gap-4">
             <h2 className="section-heading">
-              <span className="font-mono text-xl text-brand-400">03.</span> Projects
+              <span className="font-mono text-xl text-brand-400">04.</span> Projects
             </h2>
             <div className="h-px flex-1 bg-white/10" />
           </div>

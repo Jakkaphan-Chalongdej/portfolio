@@ -1,5 +1,5 @@
-import { FiCpu } from "react-icons/fi";
-import { about } from "../data";
+import { FiCpu, FiBookOpen } from "react-icons/fi";
+import { about, education } from "../data";
 import Reveal from "./Reveal";
 import CountUp from "./CountUp";
 
@@ -24,19 +24,34 @@ export default function About() {
               ))}
             </div>
 
-            <div className="mt-8 rounded-xl border border-white/10 bg-ink-900/60 p-5">
-              <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-white">
-                <FiCpu className="text-brand-400" /> Currently learning
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              <div className="rounded-xl border border-white/10 bg-ink-900/60 p-5">
+                <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-white">
+                  <FiCpu className="text-brand-400" /> Currently learning
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {about.learning.map((l) => (
+                    <span
+                      key={l}
+                      className="rounded-full border border-brand/30 bg-brand/5 px-3 py-1 text-sm text-brand-400"
+                    >
+                      {l}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div className="flex flex-wrap gap-2">
-                {about.learning.map((l) => (
-                  <span
-                    key={l}
-                    className="rounded-full border border-brand/30 bg-brand/5 px-3 py-1 text-sm text-brand-400"
-                  >
-                    {l}
-                  </span>
-                ))}
+
+              <div className="rounded-xl border border-white/10 bg-ink-900/60 p-5">
+                <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-white">
+                  <FiBookOpen className="text-brand-400" /> Education
+                </div>
+                <p className="text-sm font-medium text-zinc-200">
+                  {education.degree}
+                </p>
+                <p className="mt-1 text-sm text-zinc-400">{education.school}</p>
+                <p className="mt-1 font-mono text-xs text-zinc-500">
+                  {education.period}
+                </p>
               </div>
             </div>
           </Reveal>

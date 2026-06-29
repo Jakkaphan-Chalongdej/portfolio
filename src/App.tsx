@@ -3,6 +3,7 @@ import ScrollProgress from "./components/ScrollProgress";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Marquee from "./components/Marquee";
 import Projects from "./components/Projects";
@@ -24,6 +25,7 @@ export default function App() {
       <main>
         <Hero />
         <About />
+        <Experience />
         <Skills />
         <Marquee />
         <Projects />
