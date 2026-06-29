@@ -1,15 +1,19 @@
 import { motion } from "framer-motion";
 import { FiArrowDown, FiMail } from "react-icons/fi";
 import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
-import { profile } from "../data";
+import { profile, roles } from "../data";
+import { useTypewriter } from "../hooks/useTypewriter";
 
 export default function Hero() {
+  const typed = useTypewriter(roles);
+
   return (
     <section
       id="top"
       className="relative flex min-h-screen items-center overflow-hidden pt-16"
     >
-      {/* decorative floating orbs */}
+      {/* animated grid + floating orbs */}
+      <div className="pointer-events-none absolute inset-0 bg-grid [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)] opacity-[0.18]" />
       <div className="pointer-events-none absolute -left-24 top-32 h-72 w-72 animate-floaty rounded-full bg-brand/10 blur-3xl" />
       <div className="pointer-events-none absolute -right-16 bottom-24 h-80 w-80 animate-floaty rounded-full bg-cyan-500/10 blur-3xl [animation-delay:-3s]" />
 
@@ -36,9 +40,13 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-3 text-3xl font-bold tracking-tight text-zinc-500 sm:text-5xl lg:text-6xl"
+          className="mt-3 flex min-h-[1.2em] flex-wrap items-baseline gap-x-3 text-3xl font-bold tracking-tight text-zinc-500 sm:text-5xl lg:text-6xl"
         >
-          I build <span className="brand-text">reliable back-ends</span>.
+          <span>I'm a</span>
+          <span className="brand-text">
+            {typed}
+            <span className="ml-0.5 inline-block w-[3px] animate-pulse self-center bg-brand-400 align-middle [height:0.9em]" />
+          </span>
         </motion.h2>
 
         <motion.p

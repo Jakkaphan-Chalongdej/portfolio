@@ -40,16 +40,24 @@ export const profile = {
   },
 };
 
+// Rotating titles for the hero typewriter effect.
+export const roles = [
+  "Back-end Developer",
+  "API Specialist",
+  "NestJS Engineer",
+  "PostgreSQL Enthusiast",
+];
+
 export const about = {
   paragraphs: [
     "I'm a back-end developer based in Bangkok with more than five years of hands-on experience building the engines behind web applications. My focus is designing clean, well-structured APIs and data models that scale.",
     "Day to day I work mostly with NestJS and TypeScript on the server, backed by PostgreSQL, MySQL, and SQL Server. I'm comfortable across the stack — from React and Next.js on the front end to Docker and Linux in deployment.",
     "Right now I'm deepening my knowledge of Domain-Driven Design and API Security, sharpening both the architecture and the safety of the systems I build.",
   ],
-  highlights: [
-    { value: "5+", label: "Years of experience" },
-    { value: "API", label: "Design & development" },
-    { value: "DDD", label: "Currently learning" },
+  stats: [
+    { value: 5, suffix: "+", label: "Years of experience" },
+    { value: 20, suffix: "+", label: "Technologies used" },
+    { value: 12, suffix: "+", label: "Projects shipped" },
   ],
   learning: ["Domain-Driven Design (DDD)", "API Security"],
 };

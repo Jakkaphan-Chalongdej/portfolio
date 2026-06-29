@@ -1,6 +1,7 @@
 import { FiCpu } from "react-icons/fi";
 import { about } from "../data";
 import Reveal from "./Reveal";
+import CountUp from "./CountUp";
 
 export default function About() {
   return (
@@ -42,15 +43,15 @@ export default function About() {
 
           <Reveal delay={0.15}>
             <div className="grid gap-4">
-              {about.highlights.map((h) => (
+              {about.stats.map((s) => (
                 <div
-                  key={h.label}
-                  className="rounded-xl border border-white/10 bg-ink-900/60 p-6 transition-colors hover:border-brand/40"
+                  key={s.label}
+                  className="rounded-xl border border-white/10 bg-ink-900/60 p-6 transition-all hover:-translate-y-0.5 hover:border-brand/40"
                 >
                   <div className="text-3xl font-extrabold brand-text">
-                    {h.value}
+                    <CountUp to={s.value} suffix={s.suffix} />
                   </div>
-                  <div className="mt-1 text-sm text-zinc-400">{h.label}</div>
+                  <div className="mt-1 text-sm text-zinc-400">{s.label}</div>
                 </div>
               ))}
             </div>

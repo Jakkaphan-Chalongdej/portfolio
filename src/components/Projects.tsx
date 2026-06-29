@@ -25,19 +25,32 @@ export default function Projects() {
                 href={project.url}
                 target="_blank"
                 rel="noreferrer"
-                className="group flex h-full flex-col rounded-2xl border border-white/10 bg-ink-900/60 p-6 transition-all hover:-translate-y-1 hover:border-brand/40 hover:shadow-[0_0_40px_-12px_rgba(6,182,212,0.4)]"
+                onMouseMove={(e) => {
+                  const r = e.currentTarget.getBoundingClientRect();
+                  e.currentTarget.style.setProperty("--mx", `${e.clientX - r.left}px`);
+                  e.currentTarget.style.setProperty("--my", `${e.clientY - r.top}px`);
+                }}
+                className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-ink-900/60 p-6 transition-all hover:-translate-y-1 hover:border-brand/40 hover:shadow-[0_0_40px_-12px_rgba(6,182,212,0.4)]"
               >
-                <div className="mb-4 flex items-center justify-between">
+                {/* cursor spotlight */}
+                <span
+                  className="pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  style={{
+                    background:
+                      "radial-gradient(220px circle at var(--mx) var(--my), rgba(34,211,238,0.12), transparent 60%)",
+                  }}
+                />
+                <div className="relative mb-4 flex items-center justify-between">
                   <FiGithub className="text-2xl text-brand-400" />
                   <FiArrowUpRight className="text-xl text-zinc-600 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand-400" />
                 </div>
-                <h3 className="text-lg font-semibold text-white transition-colors group-hover:text-brand-400">
+                <h3 className="relative text-lg font-semibold text-white transition-colors group-hover:text-brand-400">
                   {project.name}
                 </h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">
+                <p className="relative mt-2 flex-1 text-sm leading-relaxed text-zinc-400">
                   {project.description}
                 </p>
-                <div className="mt-4 flex flex-wrap gap-2">
+                <div className="relative mt-4 flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
